@@ -1,0 +1,130 @@
+﻿/*body {
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+    font-family: Arial, sans-serif;
+}*/
+
+.myDr {
+    display: flex; /* Flexbox enable karega */
+    flex-direction: column; /* Column-wise align karega */
+    justify-content: center; /* Vertical center karega */
+    align-items: center; /* Horizontal center karega */
+   /* height: 100vh;*/ /* Pure screen height ke liye */
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #0d47a1;
+    font-size: large;
+    border: 1px solid black;
+    padding: 30px 20px 10px 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 3rex;
+}
+
+.btn {
+    background-color: #007BFF;
+    padding: 2rex;
+    border-radius: 8px;
+    color: White;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+        transform: scale(0.9);
+    }
+
+.conta {
+    max-width: 100%;
+    max-height: 80%;
+    margin-left: 80px;
+}
+
+/* Parent Container */
+.conta {
+    display: flex;
+    flex-direction: row; /* Align children horizontally */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Add some padding */
+}
+
+/* Nurse Card */
+.nurse {
+    display: flex;
+    background-color: rgb(57, 198, 198);
+    /*    background-color: #F3E5F5;*/
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 10px; /* Add margin for spacing */
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in dimensions */
+    text-align: center; /* Center text */
+}
+
+/* Nurse Image */
+.nurse-image {
+    height: 170px;
+    width: 218px;
+    margin: 10px 0; /* Add margin for spacing */
+    border-radius:1rem;
+    border:2px solid black;
+}
+
+/* Label */
+.lbl {
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+/* Button */
+.Button {
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Adjust font size */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+    .Button:hover {
+        background-color: #0056b3;
+        transform: scale(1.1); /* Darker blue on hover */
+    }
+
+.logo {
+    max-width: 150px;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+}
+
+.head {
+    background-color: Aqua;
+    color: Blue;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: inherit;
+    height: 150px;
+    align-items: center;
+}
+
+    .head div {
+        padding-top:40px;
+    }
+    
+    .BTN1:hover {
+        background-color: lightgreen;
+        transform: scale(1.1); /* Darker blue on hover */
+    }
+.BTN1 {
+    border-radius: 0.5rem;
+}

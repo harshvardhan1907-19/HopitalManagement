@@ -1,0 +1,58 @@
+﻿.BTN1:hover {
+    background-color: #00CCFF;
+    transform: scale(1.1); 
+}
+
+.BTN1 {
+    border-radius: 0.5rem;
+    transition: 0.1s ease-in-out;
+}
+
+.BTN2:hover {
+    background-color: red;
+    transform: scale(1.1); 
+}
+
+.BTN2 {
+    border-radius: 0.5rem;
+    transition: 0.1s ease-in-out;
+}
+
+.BTNChangePass:hover {
+    background-color: lightblue;
+    transform: scale(1.1); 
+}
+.BTNChangePass
+{   
+     border-radius: 0.5rem;
+    transition: 0.2s ease-in-out;
+    }
+    
+.BTNSubmit {
+    border-radius: 0.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+.BTNSubmit:hover {
+    background-color: lightgreen;
+    transform: scale(1.1); 
+}
+.admin-title {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Arial;
+    color: #FFFFFF;
+    background-color: #0066CC; /* Ensure background covers full width */
+    text-align: center;
+    width: 100%;
+    padding: 10px; /* Add padding for better spacing */
+}
+.BTNO:hover {
+    background-color: orange;
+    transform: scale(1.1); 
+}
+
+.BTNO {
+    border-radius: 0.5rem;
+    transition: 0.2s ease-in-out;
+}

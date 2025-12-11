@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DMasterPage.master.cs" Inherits="Doctor_DMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Btncss/BtnStyleSheet.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+     .style6
+        {
+            width: 487px;
+        }
+        .style7
+        {
+            width: 263px;
+            font-family: Calibri;
+        }
+        </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ <p style="text-align: center">
+                <img alt="" src="../Img/logo.png" 
+            style="height: 70px; width: 345px; text-align: center;" /></p>
+    <form id="form1" runat="server">
+    <table width="100%" style="background-color:RGB(241, 241, 241);">
+    <tr>
+    <td class="style6">
+     &nbsp;
+        <asp:Label ID="LBLDid" runat="server" Visible="False"></asp:Label>
+    </td>
+   
+    <td class="style7" style="text-align: center">
+        Welcome
+       </td>
+       <td style="text-align: right">
+       <asp:LinkButton align="right" ID="LinkButton1" runat="server" Font-Bold="True" 
+               Font-Underline="False" ForeColor="Gray" onclick="LinkButton1_Click" 
+               CssClass="BTN1">   Change Password   </asp:LinkButton>
+           &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:LinkButton align="right" ID="LinkButton2" 
+               runat="server" Font-Bold="True" Font-Underline="False" ForeColor="Gray" 
+               PostBackUrl="~/Doctor/login.aspx" CssClass="BTN2">   Back   </asp:LinkButton>
+    </td>
+    </tr>
+    </table>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+    </body>
+</html>

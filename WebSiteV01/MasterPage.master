@@ -1,0 +1,245 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="MaterStyleSheet.css" rel="stylesheet" type="text/css" />
+    
+   
+    <link href="H%20material/StyleSheet.css" rel="stylesheet" type="text/css" />
+   
+    <style type="text/css">
+        .container
+        {
+            background-color: #F8F9FA;
+            max-width: 100%;
+            max-height: 80%;
+        }
+        
+        td
+        {
+            margin: 4px; /* Yeh margin kaam nahi karega */
+            padding: 40px;
+            text-align: left;
+        }
+    </style>
+    
+    <style type="text/css">
+                       
+  .box {
+    float: left; /* Aligns divs side by side */
+    width: 48%; /* Adjust width as needed */
+   
+    padding: 20px;
+    
+    text-align: left;
+    margin-right: 2%; /* Space between divs */
+  }
+  .box:last-child {
+    margin-right: 0;
+  }
+
+        hr
+        {
+            width:1283px;
+            }
+        .style17
+        {
+            width: 100%;
+            height: 5%;
+        }
+        .style18
+        {
+            width: 413px;
+        }
+        .style19
+        {
+            width: 100%;
+            height: 100px;
+            background-color: #F0F0F0;
+        }
+        .style21
+        {
+            width: 100%;
+            height: 0;
+        }
+        .style24
+        {
+            width: 100%;
+            height: 2%;
+        }
+        .style25
+        {
+            width: 850px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style="background-color: #F0F0F0;" cellpadding="0" cellspacing="0" class="style24">
+        <tr>
+            <td class="style25">
+                    
+                    <asp:LinkButton ID="LBtnTerms9" runat="server" Font-Bold="True" 
+                        Font-Underline="False" ForeColor="#00CCFF">Terms</asp:LinkButton>
+                    &nbsp;|
+                    <asp:LinkButton ID="LBtnTerms10" runat="server" Font-Bold="True" 
+                        Font-Underline="False" ForeColor="#00CCFF">Privacy Policy</asp:LinkButton>
+                    &nbsp;|
+                    <asp:LinkButton ID="LBtnTerms11" runat="server" Font-Bold="True" 
+                        Font-Underline="False" ForeColor="#00CCFF" onclick="LBtnTerms1_Click">Legal Agreement</asp:LinkButton>
+                        
+
+                        
+            </td>
+            <td>
+                <asp:Image ID="ImgEmail5" runat="server" Height="23px" ImageAlign="AbsMiddle" 
+                        ImageUrl="~/Img/phone.png" ViewStateMode="Enabled" Width="25px" />
+                &nbsp;<asp:LinkButton ID="LBtnTerms14" runat="server" Font-Bold="True" Font-Underline="False" 
+                        ForeColor="#00CCFF">+91 1234567890</asp:LinkButton>
+                    &nbsp;<asp:Image ID="ImgEmail6" runat="server" Height="23px" ImageAlign="AbsMiddle" 
+                        ImageUrl="~/Img/Email.png" ViewStateMode="Enabled" Width="25px" />
+                &nbsp;<asp:LinkButton ID="LBtnTerms15" runat="server" Font-Bold="True" Font-Underline="False" 
+                        ForeColor="#00CCFF" >hospital@h.org</asp:LinkButton>
+                        
+                </td>
+        </tr>
+    </table>
+    <table class="style17">
+        <tr>
+           <td class="style18">
+   <img src="~/Img/logo.png" style="height: 70px; width: 345px" runat="server" id="imgLogo" />
+</td>
+
+            <td>
+                <asp:Menu ID="Menu2" runat="server" Font-Bold="True" 
+                    Font-Size="Medium" ForeColor="Black" Orientation="Horizontal" 
+                    StaticSubMenuIndent="16px" style="text-align: right" ViewStateMode="Enabled" 
+                    Width="700px">
+                    <DynamicHoverStyle BackColor="#00CCFF" Font-Bold="True" ForeColor="White" />
+                    <DynamicMenuItemStyle Font-Bold="True" ForeColor="Black" Font-Size="Medium" />
+                    <DynamicSelectedStyle ForeColor="White" />
+                    <Items>
+                        <asp:MenuItem Text="HOME" Value="Home" NavigateUrl="~/Home/home.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="STAFF" Value="STAFF">
+                            <asp:MenuItem Text="Doctors" Value="Doctors" 
+                                NavigateUrl="~/Staff/Doctor.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Compounders" Value="Compounders" 
+                                NavigateUrl="~/Staff/Nurse.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="APPOINTMENT" Value="APPOINTMENT" 
+                            NavigateUrl="~/Appointment.aspx">
+                            <asp:MenuItem NavigateUrl="~/Appointment.aspx" Text="New" Value="New">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Patient/Login.aspx" Text="See Details" 
+                                Value="See Details"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="GALLERY" Value="GALLERY" NavigateUrl="~/Gallery.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="EVENTS" Value="EVENTS" NavigateUrl="~/event/Events.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="CONTACT" Value="CONTACT" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="ABOUT US" Value="ABOUT US" NavigateUrl="~/AboutUs.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Login" Value="Login">
+                            <asp:MenuItem NavigateUrl="~/Doctor/login.aspx" Text="Doctor" Value="Doctor">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/login.aspx" Text="Admin" Value="Admin">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#00CCFF" Font-Bold="True" ForeColor="White" />
+                    <StaticMenuItemStyle VerticalPadding="7px" Font-Size="Medium" 
+                        HorizontalPadding="5px" />
+                    <StaticMenuStyle HorizontalPadding="18px" />
+                    <StaticSelectedStyle BackColor="#00CCFF" ForeColor="White" />
+                </asp:Menu>
+            </td>
+        </tr>
+    </table><hr/>
+    <br />
+   
+    
+        <br />
+        <div>
+              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+    </div>
+    <br />
+    <table cellpadding="0" cellspacing="0" class="style19">
+        <tr>
+            <td>
+                <asp:Label ID="Label8" runat="server" 
+                    Text="&lt;h3&gt;Health Solutions&lt;/h3&gt;" ForeColor="#999999"></asp:Label>
+                    <asp:Label ID="Label18" runat="server" 
+                    Text="&lt;hr style=&quot;width:200px;&quot; align=&quot;left&quot;/&gt;"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="Label9" runat="server" Text="&lt;h3&gt;Recent Posts&lt;/h3&gt;" 
+                    ForeColor="#999999" ></asp:Label> 
+                     <asp:Label ID="Label17" runat="server" 
+                    Text="&lt;hr style=&quot;width:200px;&quot; align=&quot;left&quot;/&gt;"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="Label22" runat="server" Text="&lt;h3&gt;Location Map&lt;/h3&gt;" 
+                    ForeColor="#999999"></asp:Label> 
+                     <asp:Label ID="Label16" runat="server" 
+                    Text="&lt;hr style=&quot;width:200px;&quot; align=&quot;left&quot;/&gt;"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="Label11" runat="server" Text="&lt;h3&gt;Location Map&lt;/h3&gt;" 
+                    ForeColor="#999999"></asp:Label> 
+                     <asp:Label ID="Label15" runat="server" 
+                    Text="&lt;hr style=&quot;width:200px;&quot; align=&quot;left&quot;/&gt;"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:BulletedList ID="BulletedList2" runat="server">
+                    <asp:ListItem>Alzheimer&#39;s Disease</asp:ListItem>
+                    <asp:ListItem>Diabetes Help Center</asp:ListItem>
+                    <asp:ListItem>Learn About Triglycerides</asp:ListItem>
+                    <asp:ListItem>Vaccine Questions?</asp:ListItem>
+                    <asp:ListItem>ED Tablet</asp:ListItem>
+                    <asp:ListItem>Rheumatoid Arthritis?</asp:ListItem>
+                </asp:BulletedList>
+            </td>
+            <td>
+                &nbsp;</td>
+            <td>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.40097274098!2d72.52604617440524!3d23.045756779157458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8494d53c746f%3A0x74e7f9e90dc0ca90!2sJ.%20G.%20College%20of%20Computer%20Application!5e0!3m2!1sen!2sin!4v1741978815296!5m2!1sen!2sin" width="250" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+            <td>
+                <table style="float: left;" cellpadding="0" cellspacing="0" class="style21">
+                    <tr>
+                        <td>
+                                <img alt="" src="Img/location.png" style="height: 36px; width: 37px" /></td>
+                        <td>
+                                <asp:Label ID="Label19" runat="server" Font-Size="Small" ForeColor="#999999" 
+                                    Text="No: 58 A, East Madison St &lt;br&gt; Baltimore, MD, USA"></asp:Label>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <img alt="" src="Img/telephone%20(1).png" style="height: 36px; width: 37px" /></td>
+                        <td>
+                                <asp:Label ID="Label20" runat="server" Font-Size="Small" ForeColor="#999999" 
+                                    Text="+91 123456790"></asp:Label>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <img alt="" src="Img/email%20(1).png" style="height: 36px; width: 37px" /></td>
+                        <td>
+                                <asp:Label ID="Label21" runat="server" Font-Size="Small" ForeColor="#999999" 
+                                    Text="hospitan@h.org"></asp:Label>
+                            </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>

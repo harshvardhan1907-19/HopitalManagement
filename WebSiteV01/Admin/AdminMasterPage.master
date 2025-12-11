@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Admin_AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Btncss/BtnStyleSheet.css" rel="stylesheet" type="text/css" />
+    
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            height: 0;
+        }
+        .style2
+        {
+            width: 306px;
+            text-align: left;
+            background-color: #003366;
+        }
+        .style3
+        {
+            font-size: xx-large;
+            width: 43%;
+            background-color: #0066CC;
+            text-align: center;
+        }
+        .style4
+        {
+            color: #FFFFFF;
+            background-color: #0066CC;
+            text-align: right;
+        }
+        .style5
+        {
+            height: 2px;
+        }
+        .style6
+        {
+            font-size: 40px;
+            font-weight: 700;
+            font-family: Arial;
+            color: #FFFFFF;
+        }
+        .style7
+        {
+            font-size: xx-large;
+            width: 28%;
+            background-color: #0066CC;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <form id="form1" runat="server">
+     <table cellpadding="0"cellspacing="0" class="style1">
+         <tr>
+             <td class="style7">
+                 <br />
+                 <span class="style6">
+                 <asp:Label ID="Label1" runat="server" CssClass="admin-title" Text="Admin"></asp:Label>
+                 <br />
+                 <br />
+                 </span></td>
+             <td class="style3">
+                 &nbsp;&nbsp; </td>
+             <td class="style4">
+                 <asp:LinkButton ID="LinkButton1" runat="server" CssClass="BTNO" 
+                     PostBackUrl="~/Admin/ChangePassword.aspx" 
+                     style="font-weight: 700; font-size: large; color: #FFFFFF; text-align: right">Change Password</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                 <asp:LinkButton ID="LinkButton2" runat="server" CssClass="BTN2" 
+                     
+                     style="font-weight: 700; font-size: large; color: #FFFFFF; text-align: right" 
+                     PostBackUrl="~/Home/home.aspx">Log out</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             </td>
+             <td class="style4">
+                 &nbsp;</td>
+         </tr>
+         </table>
+     <table class="style1">
+         <tr>
+             <td bgcolor="Silver" class="style2" rowspan="2">
+                 <asp:TreeView ID="TreeView1" runat="server" Height="456px" 
+                     style="font-size: x-large; font-family: Arial; background-color: #003366;" 
+                     Width="310px" ForeColor="White" ShowCheckBoxes="Leaf">
+                     <HoverNodeStyle Font-Bold="True" ForeColor="#009933" />
+                     <Nodes>
+                         <asp:TreeNode Text="Dash Board" Value="Dash Board" 
+                             NavigateUrl="~/Admin/DashBoard.aspx" Selected="True"></asp:TreeNode>
+                         <asp:TreeNode Text="Manage Doctors" Value="Manage Doctors">
+                             <asp:TreeNode Text="Add New" Value="Add New" 
+                                 NavigateUrl="~/Admin/Manage Doctors/New Add.aspx"></asp:TreeNode>
+                             <asp:TreeNode Text="Edit Doctor Details" Value="Edit Doctor Details" 
+                                 NavigateUrl="~/Admin/Manage Doctors/EditDoctor.aspx">
+                             </asp:TreeNode>
+                             <asp:TreeNode Text="View All Doctor" Value="View All Doctor" 
+                                 NavigateUrl="~/Admin/Manage Doctors/ViewDoctors.aspx"></asp:TreeNode>
+                             <asp:TreeNode Text="View Doctor Schedule" Value="View Doctor Schedule" 
+                                 NavigateUrl="~/Admin/Manage Doctors/ViewSchedule.aspx">
+                             </asp:TreeNode>
+                         </asp:TreeNode>
+                         <asp:TreeNode Text="Manage Patients" Value="Manage Patients">
+                             <asp:TreeNode Text="Add New" Value="Add New" 
+                                 NavigateUrl="~/Admin/Manage Patients/Copy of AddNew.aspx"></asp:TreeNode>
+                             <asp:TreeNode Text="Edit Patient Details" Value="Edit Patient Details" 
+                                 NavigateUrl="~/Admin/Manage Patients/EditDetails.aspx">
+                             </asp:TreeNode>
+                             <asp:TreeNode Text="View All Patients" Value="View All Patients" 
+                                 NavigateUrl="~/Admin/Manage Patients/VeiwAll.aspx"></asp:TreeNode>
+                         </asp:TreeNode>
+                     </Nodes>
+                     <SelectedNodeStyle Font-Bold="True" ForeColor="#009933" />
+                 </asp:TreeView>
+             </td>
+             <td class="style5">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                 </asp:ContentPlaceHolder>
+             </td>
+         </tr>
+         <tr>
+             <td>
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 </asp:ContentPlaceHolder>
+             </td>
+         </tr>
+         <tr>
+             <td class="style2">
+                 &nbsp;</td>
+             <td>
+                 &nbsp;</td>
+         </tr>
+     </table>
+     </form>
+     </body>
+</html>
